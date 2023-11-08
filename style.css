@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Archivo';
+	color: rgb(48, 48, 48);
+}
+
+html{
+	height: -webkit-fill-available;
+	/* Tři nově přidaný sračky, kdyžtak smazat*/
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100vh;	
+}
+
+body{
+	background-color: rgb(240, 240, 240);
+}
+
+.border{
+	overflow: hidden;
+	position: fixed;
+	width: 100vw;
+	max-width: 100%;
+	height: 100vh;
+	z-index: -5;
+}
+
+.underlight{
+	position: relative;
+	border-radius: 50%;
+	background-color: rgb(255, 208, 0);
+	top: 200px;
+	z-index: -4;
+	transition: all 1s;
+	animation-name: zluta;
+	animation-duration: 100s;
+	animation-iteration-count: infinite
+}
+
+.underlight-dva{
+	position: absolute;
+	border-radius: 50%;
+	background-color: rgb(183, 0, 255);
+	top: 150px;
+	z-index: -5;
+	transition: all 1s;
+	animation-name: fialova;
+	animation-duration: 100s;
+	animation-iteration-count: infinite
+}
+
+@keyframes zluta{
+	0%{
+		top: 50vh;
+		left: 70vw;
+	}
+	20%{
+		top: 4vh;
+		left: 50vw;
+	}
+	40%{
+		top: 3vh;
+		left: -20vw;
+	}
+	60%{
+		top: 40vh;
+		left: 10vw;
+	}
+	80%{
+		top: 50px;
+		left: 50vw;
+	}
+	100%{
+		top: 50vh;
+		left: 70vw;
+	}
+}
+
+@keyframes fialova{
+	0%{
+		top: 20vh;
+		left: 55vw;
+	}
+	20%{
+		top: 0vh;
+		left: -2vw;
+	}
+	40%{
+		top: 60vh;
+		left: 5vw;
+	}
+	60%{
+		top: 50vh;
+		left: 50vw;
+	}
+	80%{
+		top: 35vh;
+		left: 30vw;
+	}
+	100%{
+		top: 20vh;
+		left: 55vw;
+	}
+}
+
+.blur{
+	/* From https://css.glass */
+	width: 100vw;
+	max-width: 100%;
+	height: 100%;
+	background: rgba(246, 246, 246, 0.31);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Optimalizace pro telefony */
+
+@media (min-width:320px)  {
+	h1{
+		font-weight: 500;
+		font-size: 1.7rem;
+	}
+
+	h2{
+		font-weight: 390;
+		font-size: 2.6rem;
+		line-height: 95%;
+		letter-spacing: 1px;
+	}
+
+	h3{
+		font-size: 1.7rem;
+		font-weight: 400;
+	}
+
+	.underlight{
+		width: 25rem;
+		height: 25rem;
+	}
+	
+	.underlight-dva{
+		width: 25rem;
+		height: 25rem;
+	}
+
+	.blur{
+		backdrop-filter: blur(53.5px);
+		-webkit-backdrop-filter: blur(53.5px);
+	}	
+	
+	.telo{
+		width: 90vw;
+		margin: 0 auto;
+		padding-top: 25px;
+	}
+
+	.nav{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.content{
+		padding: 110px 0px;
+	}
+
+	.header{
+	}
+	.header p{
+		margin: 20px 0px;
+	}
+	.header button{
+		border: none;
+		font-size: 0.95rem;
+		font-weight: 600;
+		margin-top: 10px;
+		padding: 12px 22px;
+	}
+	#header-btn1{
+		background-color: black;
+		color: white;
+		border-radius: 500px;
+	}
+	#header-btn2{
+		margin-left: 20px;
+		background-color: transparent;
+	}
+	#header-btn2 span{
+		margin-left: 5px;
+	}
+
+	.vyhody{
+		margin-top: 40px;
+	}
+	.vyhody ul{
+		list-style: none;
+	}
+	.vyhody ul li{
+		padding-top: 10px;
+		display: flex;
+		align-items: center;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+	.vyhody ul li img{
+		width: 20px;
+		margin-right: 10px;
+	}
+
+	.ukazky{
+		background: rgba(246, 246, 246, 0.76);
+		border-radius: 20px;
+		width: 300px;
+		margin: 100px auto 150px auto;
+	}
+	.obal-white{
+		padding: 20px;
+	}
+	.obal-white p{
+		margin-top: 3px;
+		color: rgb(172, 172, 172);
+		font-size: 0.8rem;
+	}
+	.obal-black{
+		background-color: rgb(255, 255, 255);
+		border-radius: 20px;
+		padding: 5px 25px 5px 25px;
+	}
+	.list-item{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 40px 0px;
+	}
+	.item-text{
+		position: relative;
+		left: -0.7rem;
+	}
+	.item-text h4{
+		font-size: 1rem;
+	}
+	.item-text p{
+		margin-top: 3px;
+		font-size: 0.8rem;
+		color: rgb(177, 177, 177);
+	}
+	.obal-black img{
+		width: 30px;
+	}
+	.item-price h4{
+		background-color: black;
+		color: white;
+		font-size: 0.7rem;
+		font-weight: 300;
+		padding: 10px 12px;
+		border-radius: 20px;	
+	}
+
+	.sluzby{
+		margin-top: 100px;
+		margin-left: 20px;
+	}
+	.sluzby-item{
+		width: 100%;
+		background: rgba(246, 246, 246, 0.76);
+		border-radius: 20px;
+		padding: 20px;
+	}
+	.sluzby-item p{
+		width: 12.5rem;
+		color: rgb(41, 41, 41);
+		font-size: 0.9rem;
+		font-weight: 400;
+		letter-spacing: 1px;
+		line-height: 140%;
+	}
+	.item-img{
+		width: 70px;
+		height: 70px;
+		border-radius: 50px;
+		background-color: white;
+		box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.item-img img{
+		width: 40px;
+	}
+
+	.dotazy-call{
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+	}
+	.dotazy-call button{
+		background-color: white;
+		border: none;
+		padding: 5px 20px;
+		border-radius: 20px;
+		color: blueviolet;
+		font-weight: 600;
+	}
+
+	.nase-sluzby-hotely h2{
+		margin: 150px 0 100px 0px;
+	}
+	.hotely-sluzby{
+		margin-left: 20px;
+	}
+	.hotely-sluzby-item{
+		margin-bottom: 40px;
+		width: 200px;
+	}
+	.hotely-cislo{
+		display: flex;
+		align-items: center;
+	}
+	.hotely-cislo hr{
+		width: 15px;
+		background-color: black;
+		border: 0.5px solid black;
+	}
+	.hotely-cislo p{
+		margin-left: 10px;
+	}
+	.hotely-info p{
+		margin-top: 10px;
+		color: rgb(78, 78, 78);
+	}
+	.hotely-info button{
+		margin-top: 20px;
+		font-weight: 600;
+		border: none;
+		background-color: transparent;
+		color: blueviolet;
+		letter-spacing: 1px;
+	}
+	.hotely-info span{
+		color: blueviolet;
+	}
+
+	.zkusenosti{
+	}
+	.zkusenosti h2{
+		margin: 150px 0px 100px 0px
+	}
+	.zkusenosti table{
+		margin: 0 auto;
+	}
+	.zkusenosti table h3{
+		font-size: 3rem;
+	}
+	.zkusenosti table p{
+		max-width: 150px;
+		font-weight: 300;
+		text-align: center;
+	}
+	.zkusenosti table tr{
+		height: 8rem;
+		text-align: center;
+	}
+	.zkusenosti-probehlo{
+		margin-top: 40px;
+		text-align: center;
+		color: blueviolet;
+	}
+	
+}
+
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+
+}
+  
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+}
+  
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+}
+  
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+	.underlight{
+		width: 40rem;
+		height: 40rem;
+	}
+
+	.underlight-dva{
+		width: 40rem;
+		height: 40rem;
+	}  
+
+	.blur{
+		backdrop-filter: blur(153.5px);
+		-webkit-backdrop-filter: blur(153.5px);
+	}
+}
+
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+}
+
+@media (min-width:1601px) { /* hi-res laptops and desktops */ 
+}
